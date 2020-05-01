@@ -27,6 +27,7 @@ class App extends Component {
         <Cards data={data} />
         {/* <CountriesSelector />
         <Charts /> */}
+        <Charts />
       </div>
     );
   }

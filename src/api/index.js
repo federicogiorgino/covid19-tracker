@@ -17,3 +17,19 @@ export const dataFetch = async () => {
     };
   } catch (error) {}
 };
+
+export const dailyDataFetch = async () => {
+  try {
+    //deconstruct the response from the axios request
+    const { data } = await axios.get(`${URL}/daily`);
+
+    //map through the data from the axios response and gets 'confirmed', 'deaths', and the 'date'
+    const modifiedData = data.map((dailyData) => ({
+      confirmed: dailyData.confirmed.total,
+      deaths: dailyData.deaths.total,
+      date: dailyData.reportDate,
+    }));
+
+    return modifiedData;
+  } catch (error) {}
+};
