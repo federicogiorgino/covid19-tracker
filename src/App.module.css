@@ -4,7 +4,7 @@
   font-family: "Rubik" !important;
 }
 body {
-  background-color: rgb(255, 255, 230);
+  background-color: rgb(255, 255, 255);
 }
 
 .container {
@@ -12,4 +12,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.image {
+  width: 300px;
 }
